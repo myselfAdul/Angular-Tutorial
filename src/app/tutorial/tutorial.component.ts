@@ -1,5 +1,5 @@
 import { NgIf } from '@angular/common';
-import { Component, ElementRef, ViewChildren, QueryList } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-tutorial',

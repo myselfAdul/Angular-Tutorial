@@ -2,11 +2,11 @@
   <div class="title">
     <h1 class="f-40">{{ title }}</h1>
   </div>
-  <hr style="border: none; height: 2px; background-color: rgb(237, 91, 0);">
+  <hr style="border: none; height: 2px; background-color: rgb(237, 91, 0)" />
 
   <div class="card">
     <h2 class="header" (click)="toggleVisibility('faq1')">Angular History</h2>
-    <p class="answer" >
+    <p class="answer">
       Angular is a popular open-source web application framework developed and
       maintained by Google. Its history begins in 2009 when developers Misko
       Hevery and Adam Abrons created **AngularJS** (originally just Angular),
@@ -78,7 +78,7 @@
           removing elements.
         </li>
         <li>
-          <strong>Routing:</strong> Angular’s RouterModule is used to configure
+          <strong>Routing:</strong> Angular's RouterModule is used to configure
           routes, enabling navigation between different views and components,
           making it possible to create single-page applications (SPAs).
         </li>
@@ -126,7 +126,7 @@
         </li>
         <li>
           <strong>Metadata (Decorators):</strong> The
-          <code>Component</code> decorator is used to define the component’s
+          <code>Component</code> decorator is used to define the component's
           selector, template, and styles. It tells Angular how to use the
           component.
         </li>
@@ -187,8 +187,8 @@
 
       <h3>2. HTML Template File (.html)</h3>
       <p>
-        This file defines the component’s view, containing the HTML structure
-        that binds to the component’s properties and methods. Angular templates
+        This file defines the component's view, containing the HTML structure
+        that binds to the component's properties and methods. Angular templates
         use data binding syntax like <code>&#123;&#123;</code> and directives
         like <code>*ngIf</code> and <code>*ngFor</code>.
       </p>
@@ -482,14 +482,14 @@ export class ExampleComponent &#123;
 
       <h5>HTML Template (example.component.html)</h5>
       <pre><code>
-&lt;div&gt;
-  &lt;button (click)="showItems = !showItems"&gt;Toggle Items&lt;/button&gt;
+        &lt;div&gt;
+        &lt;button (click)="showItems = !showItems"&gt;Toggle Items&lt;/button&gt;
 
-  &lt;ul *ngIf="showItems"&gt;
-    &lt;li *ngFor="let item of items"&gt;&#123;&#123; items &#125;&#125;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-  </code></pre>
+        &lt;ul *ngIf="showItems"&gt;
+            &lt;li *ngFor="let item of items"&gt;&#123;&#123; items &#125;&#125;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;/div&gt;
+      </code></pre>
 
       <p>
         In this example, clicking the button toggles the visibility of the list.
@@ -502,14 +502,17 @@ export class ExampleComponent &#123;
   </div>
 
   <div class="card">
-    <h2 class="header" (click)="toggleVisibility('faq8')" >Angular Command Tutorial</h2>
+    <h2 class="header" (click)="toggleVisibility('faq8')">
+      Angular Command Tutorial
+    </h2>
 
-    <div *ngIf="visibilityStates['faq8']" ><p> 
+    <div *ngIf="visibilityStates['faq8']">
+      <p>
         This section provides basic commands for starting a new Angular project,
         creating components, and running the project using the Angular CLI
         (Command Line Interface).
       </p>
-  
+
       <h3>1. Install Angular CLI</h3>
       <p>
         Before starting an Angular project, ensure you have the Angular CLI
@@ -518,7 +521,7 @@ export class ExampleComponent &#123;
       <pre><code>
     npm install -g &#64;angular/cli
       </code></pre>
-  
+
       <h3>2. Create a New Angular Project</h3>
       <p>To create a new Angular project, use the following command:</p>
       <pre><code>
@@ -529,28 +532,30 @@ export class ExampleComponent &#123;
         You will be prompted to choose some configuration options, such as
         including Angular routing and selecting a stylesheet format.
       </p>
-  
+
       <h3>3. Navigate to the Project Directory</h3>
       <p>Once the project is created, navigate into the project directory:</p>
       <pre><code>
     cd my-angular-project
       </code></pre>
-  
+
       <h3>4. Create a New Component</h3>
       <p>To generate a new component, use the following command:</p>
       <pre><code>
-    ng generate component my-component
+        ng generate component my-component
       </code></pre>
       <p>You can also use the shorthand command:</p>
       <pre><code>
-    ng g c my-component
+        ng g c my-component
       </code></pre>
       <p>Replace <code>my-component</code> with the name of your component.</p>
-  
+
       <h3>5. Run the Angular Project</h3>
-      <p>To start the development server and run the project, use the command:</p>
+      <p>
+        To start the development server and run the project, use the command:
+      </p>
       <pre><code>
-    ng serve
+        ng serve
       </code></pre>
       <p>
         By default, the application will be available at
@@ -559,16 +564,16 @@ export class ExampleComponent &#123;
         >. You can open this URL in your web browser to see your application
         running.
       </p>
-  
+
       <h3>6. Building the Project for Production</h3>
       <p>When you're ready to build your project for production, run:</p>
       <pre><code>
-    ng build --prod
+        ng build --prod
       </code></pre>
       <p>
         This will create an optimized build of your application in the
         <code>dist/</code> folder.
-      </p></div>
-    
+      </p>
+    </div>
   </div>
 </div>
