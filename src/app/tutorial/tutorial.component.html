@@ -1,0 +1,574 @@
+<div class="container">
+  <div class="title">
+    <h1 class="f-40">{{ title }}</h1>
+  </div>
+  <hr style="border: none; height: 2px; background-color: rgb(237, 91, 0);">
+
+  <div class="card">
+    <h2 class="header" (click)="toggleVisibility('faq1')">Angular History</h2>
+    <p class="answer" >
+      Angular is a popular open-source web application framework developed and
+      maintained by Google. Its history begins in 2009 when developers Misko
+      Hevery and Adam Abrons created **AngularJS** (originally just Angular),
+      which was designed to simplify the process of building dynamic single-page
+      web applications (SPAs). AngularJS introduced revolutionary concepts like
+      two-way data binding, dependency injection, and directives, which made the
+      development of interactive user interfaces much easier compared to
+      traditional methods. In 2016, Google released a complete rewrite of
+      AngularJS, known as **Angular 2**, which marked a major shift in the
+      framework’s architecture. Unlike AngularJS, which was built using
+      JavaScript, Angular 2 and subsequent versions are built with
+      **TypeScript**, a statically typed superset of JavaScript. This rewrite
+      was done to improve performance, scalability, and maintainability, and it
+      abandoned many of the core ideas of AngularJS in favor of a more modular
+      and component-based architecture. Angular 2 also adopted modern web
+      standards and embraced mobile-first development, leading to better overall
+      performance. After Angular 2, subsequent versions followed a predictable
+      release cycle. Angular 4 was released in 2017 (skipping version 3 to avoid
+      confusion with internal versioning), with improvements to speed and a
+      reduction in the bundle size. Angular continues to evolve with regular
+      updates, adding features like better tooling, Angular Ivy (a new rendering
+      engine), and enhanced developer experience, making it one of the leading
+      frameworks for building modern web applications. Today, Angular is widely
+      used by developers and companies globally, known for its powerful tools,
+      strong community, and long-term support from Google. The framework is now
+      in continuous development, with the goal of providing a robust platform
+      for scalable and maintainable web applications.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2 class="header" (click)="toggleVisibility('faq2')">
+      Structure of Angular
+    </h2>
+    <div *ngIf="visibilityStates['faq2']">
+      <p>
+        Angular applications follow a component-based architecture, organized
+        into modular parts. Here are the main building blocks:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Modules:</strong> NgModules organize an application into
+          cohesive blocks of functionality, such as feature modules or shared
+          modules. Every application has at least one root module.
+        </li>
+        <li>
+          <strong>Components:</strong> Components are the primary building
+          blocks of the UI in Angular. A component consists of an HTML template,
+          CSS styles, and a TypeScript class that defines the behavior.
+        </li>
+        <li>
+          <strong>Templates:</strong> Templates are used to define the UI layout
+          and structure. They bind component data to the view and use Angular
+          directives like <code>*ngIf</code> and <code>*ngFor</code> for dynamic
+          content.
+        </li>
+        <li>
+          <strong>Services:</strong> Services provide specific functionality
+          across components, such as data fetching, logging, and business logic.
+          They are injected into components through Angular's Dependency
+          Injection (DI) system.
+        </li>
+        <li>
+          <strong>Directives:</strong> Directives are special markers on a DOM
+          element (such as an attribute, element name, or class) that tell
+          Angular's HTML compiler to alter the element's behavior. Structural
+          directives like <code>*ngIf</code> change the layout by adding or
+          removing elements.
+        </li>
+        <li>
+          <strong>Routing:</strong> Angular’s RouterModule is used to configure
+          routes, enabling navigation between different views and components,
+          making it possible to create single-page applications (SPAs).
+        </li>
+        <li>
+          <strong>Pipes:</strong> Pipes are used to transform data in the
+          template. For example, a pipe can format dates, filter data, or modify
+          text directly in the template.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="header" (click)="toggleVisibility('faq3')">Component</h2>
+
+    <div *ngIf="visibilityStates['faq3']">
+      <p>
+        In Angular, a component is the fundamental building block of the user
+        interface. Each component controls a section of the screen called a
+        view. Components are defined by a class (with properties and methods)
+        and an associated template that renders the view.
+      </p>
+
+      <h3>Component Structure</h3>
+      <p>The typical structure of an Angular component includes:</p>
+
+      <ul>
+        <li>
+          <strong>Class (TypeScript):</strong> The component class contains the
+          data and logic that defines the behavior of the component. It is
+          decorated with the <code>Component</code> decorator, which provides
+          metadata about the component.
+        </li>
+        <li>
+          <strong>Template (HTML):</strong> The template defines the view of the
+          component. It binds to the component's data and interacts with the DOM
+          to display the content. Data binding and directives are used to
+          manipulate the DOM dynamically.
+        </li>
+        <li>
+          <strong>Styles (CSS):</strong> Each component can have its own styles,
+          which are applied to the component's template. These styles are
+          encapsulated, meaning they apply only to the component and do not
+          affect other components.
+        </li>
+        <li>
+          <strong>Metadata (Decorators):</strong> The
+          <code>Component</code> decorator is used to define the component’s
+          selector, template, and styles. It tells Angular how to use the
+          component.
+        </li>
+      </ul>
+
+      <h4>Example of a Component</h4>
+      <p>Here is an example of a basic Angular component:</p>
+
+      <pre><code>
+        import &#123; Component &#125; from 'angular/core';
+        
+        &#64;Component(&#123;
+          selector: 'app-example',
+          template: "&lt;div&gt;
+                       &lt;h1&gt;&#123;&#123; title &#125;&#125;&lt;/h1&gt;
+                       &lt;p&gt;&#123;&#123; description &#125;&#125;&lt;/p&gt;
+                     &lt;/div&gt;",
+          styles: [`
+            h1 &#123;
+              color: blue;
+            &#125;
+          `]
+        &#125;)
+        export class ExampleComponent &#123;
+          title = 'Hello, Angular!';
+          description = 'This is an example of an Angular component.';
+        &#125;
+        </code></pre>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="header" (click)="toggleVisibility('faq4')">
+      Files Created When You Generate a Component in Angular
+    </h2>
+
+    <div *ngIf="visibilityStates['faq4']">
+      <h3>1. TypeScript File (.ts)</h3>
+      <p>
+        This file defines the component's logic and behavior. It includes the
+        class, properties, and methods that control the component. The
+        <code>Component</code> decorator is used to attach metadata like the
+        selector, template URL, and styles.
+      </p>
+      <pre><code>
+      import &#123; Component &#125; from 'angular/core';
+      
+      &#64;Component(&#123;
+        selector: 'app-example',
+        templateUrl: './example.component.html',
+        styleUrls: ['./example.component.css']
+      &#125;)
+      export class ExampleComponent &#123;
+        title = 'Hello, Angular!';
+        description = 'This is a simple Angular component example.';
+      &#125;
+        </code></pre>
+
+      <h3>2. HTML Template File (.html)</h3>
+      <p>
+        This file defines the component’s view, containing the HTML structure
+        that binds to the component’s properties and methods. Angular templates
+        use data binding syntax like <code>&#123;&#123;</code> and directives
+        like <code>*ngIf</code> and <code>*ngFor</code>.
+      </p>
+      <pre><code>
+      &lt;div&gt;
+        &lt;h1&gt;&#123;&#123; title &#125;&#125;&lt;/h1&gt;
+        &lt;p&gt;&#123;&#123; description &#125;&#125;&lt;/p&gt;
+      &lt;/div&gt;
+        </code></pre>
+
+      <h3>3. CSS File (.css)</h3>
+      <p>
+        This file contains the styles for the component. These styles are scoped
+        to the component, meaning they won’t affect other components unless
+        explicitly shared.
+      </p>
+      <pre><code>
+      h1 &#123;
+        color: blue;
+        font-size: 24px;
+      &#125;
+      
+      p &#123;
+        color: gray;
+      &#125;
+        </code></pre>
+
+      <h3>4. Spec File for Testing (.spec.ts)</h3>
+      <p>
+        This file is for unit testing the component. It contains tests to ensure
+        that the component behaves as expected. Angular uses Jasmine and Karma
+        to run these tests.
+      </p>
+      <pre><code>
+      import &#123; ComponentFixture, TestBed &#125; from 'angular/core/testing';
+      import &#123; ExampleComponent &#125; from './example.component';
+      
+      describe('ExampleComponent', () => &#123;
+        let component: ExampleComponent;
+        let fixture: ComponentFixture&lt;ExampleComponent&gt;;
+      
+        beforeEach(async () => &#123;
+          await TestBed.configureTestingModule(&#123;
+            declarations: [ ExampleComponent ]
+          &#125;)
+          .compileComponents();
+        &#125;);
+      
+        beforeEach(() => &#123;
+          fixture = TestBed.createComponent(ExampleComponent);
+          component = fixture.componentInstance;
+          fixture.detectChanges();
+        &#125;);
+      
+        it('should create the component', () => &#123;
+          expect(component).toBeTruthy();
+        &#125;);
+      &#125;);
+        </code></pre>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="header" (click)="toggleVisibility('faq5')">
+      What is a Standalone Component in Angular?
+    </h2>
+
+    <div *ngIf="visibilityStates['faq5']">
+      <p>
+        A standalone component is a new type of component in Angular that does
+        not need to be declared in an <code>NgModule</code>. It simplifies
+        component creation by allowing the component to import dependencies
+        directly, such as <code>CommonModule</code> or <code>FormsModule</code>,
+        and to exist without an associated module.
+      </p>
+
+      <h3>Features of Standalone Components</h3>
+      <ul>
+        <li>Can be used without being declared in an <code>NgModule</code>.</li>
+        <li>Directly imports necessary Angular dependencies.</li>
+        <li>Simplifies the app structure by reducing the boilerplate code.</li>
+      </ul>
+
+      <h3>Example of a Standalone Component</h3>
+      <p>Here is an example of a simple standalone Angular component:</p>
+
+      <pre><code>
+    import &#123; Component &#125; from '&#64;angular/core';
+    import &#123; CommonModule &#125; from '&#64;angular/common';
+    
+    &#64;Component(&#123;
+      selector: 'app-standalone',
+      standalone: true,
+      imports: [CommonModule],
+      template: `
+        &lt;div&gt;
+          &lt;h1&gt;&#123;&#123; title &#125;&#125;&lt;/h1&gt;
+          &lt;p&gt;This is a standalone component in Angular.&lt;/p&gt;
+        &lt;/div&gt;
+      `
+    &#125;)
+    export class StandaloneComponent &#123;
+      title = 'Hello, Standalone Component!';
+    &#125;
+      </code></pre>
+
+      <p>
+        In the above example, the <code>&#64;Component</code> decorator includes
+        the <code>standalone: true</code> property, making this component
+        standalone. It also directly imports <code>CommonModule</code> to use
+        standard Angular directives.
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="header" (click)="toggleVisibility('faq6')">
+      What is a Template in Angular?
+    </h2>
+    <div *ngIf="visibilityStates['faq6']">
+      <p>
+        In Angular, a <strong>template</strong> is a part of the component that
+        defines the user interface (UI) layout and structure. It is essentially
+        the HTML markup that is used to render the component's view. Templates
+        can include standard HTML elements, Angular-specific directives, and
+        data binding expressions.
+      </p>
+
+      <h3>Key Features of Angular Templates:</h3>
+      <ul>
+        <li>
+          <strong>Data Binding:</strong> Angular templates allow you to bind
+          data from the component class to the view using various types of
+          binding:
+          <ul>
+            <li>
+              <strong>Interpolation:</strong> Uses double curly braces (
+              <code>&#123;&#123;</code> <code>&#125;&#125;</code> ) to display
+              component properties.
+            </li>
+            <li>
+              <strong>Property Binding:</strong> Binds the value of a component
+              property to an HTML element property using square brackets (<code
+                >[ ]</code
+              >).
+            </li>
+            <li>
+              <strong>Event Binding:</strong> Listens for events (like clicks)
+              and calls methods in the component using parentheses (<code
+                >( )</code
+              >).
+            </li>
+            <li>
+              <strong>Two-Way Binding:</strong> Combines property and event
+              binding using <code>[( )]</code>, typically used with forms.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Directives:</strong> Templates can use Angular directives to
+          manipulate the DOM, including:
+          <ul>
+            <li>
+              <strong>Structural Directives:</strong> Change the structure of
+              the DOM (e.g., <code>*ngIf</code>, <code>*ngFor</code>).
+            </li>
+            <li>
+              <strong>Attribute Directives:</strong> Change the appearance or
+              behavior of an existing element (e.g., <code>ngClass</code>,
+              <code>ngStyle</code>).
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Pipes:</strong> Templates can use pipes to transform displayed
+          data (e.g., formatting dates, currency, etc.) using the pipe operator
+          (<code>|</code>).
+        </li>
+        <li>
+          <strong>Component Hierarchies:</strong> Templates can include other
+          components, enabling a hierarchical structure for creating reusable
+          components.
+        </li>
+      </ul>
+
+      <h3>Example of a Template:</h3>
+
+      <h4>TypeScript Component (example.component.ts)</h4>
+      <pre><code>
+    import &#123; Component &#125; from '&#64;angular/core';
+    
+    &#64;Component(&#123;
+      selector: 'app-example',
+      templateUrl: './example.component.html',
+      styleUrls: ['./example.component.css']
+    &#125;)
+    export class ExampleComponent &#123;
+      title = 'Welcome to Angular!';
+      description = 'This is a basic example of an Angular template.';
+      items = &#91; 'Item 1', 'Item 2', 'Item 3' &#93;;
+    &#125;
+      </code></pre>
+
+      <h4>HTML Template (example.component.html)</h4>
+      <pre><code>
+    &lt;div&gt;
+      &lt;h1&gt;&#123;&#123; title &#125;&#125;&lt;/h1&gt;
+      &lt;p&gt;&#123;&#123; description &#125;&#125;&lt;/p&gt;
+    
+      &lt;ul&gt;
+        &lt;li *ngFor="let item of items"&gt;&#123;&#123; items &#125;&#125;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+      </code></pre>
+
+      <p>
+        In the above example, the properties <code>title</code> and
+        <code>description</code> from the component class are displayed using
+        <code>&#123;&#123;</code> <code>&#125;&#125;</code>, and the
+        <code>*ngFor</code> directive iterates over the <code>items</code> array
+        to generate a list item for each element.
+      </p>
+    </div>
+  </div>
+
+  <!-- DIRECTIVE`````````````````````` -->
+  <div class="card">
+    <h2 class="header" (click)="toggleVisibility('faq7')">
+      What is a Directive in Angular?
+    </h2>
+    <div *ngIf="visibilityStates['faq7']">
+      <p>
+        A <strong>directive</strong> is a class in Angular that allows you to
+        extend the behavior of HTML elements. Directives are used to manipulate
+        the DOM, modify elements, or add functionality to components. There are
+        three types of directives in Angular:
+      </p>
+      <ul>
+        <li><strong>Components:</strong> Directives with a template.</li>
+        <li>
+          <strong>Attribute Directives:</strong> Change the appearance or
+          behavior of existing elements.
+        </li>
+        <li>
+          <strong>Structural Directives:</strong> Change the structure of the
+          DOM by adding or removing elements.
+        </li>
+      </ul>
+
+      <h3>Structural Directives</h3>
+      <p>
+        Structural directives are a special type of directive that alters the
+        layout of the DOM by adding or removing elements. They are denoted by
+        asterisks (<code>*</code>) in templates. Examples of structural
+        directives include:
+      </p>
+      <ul>
+        <li>
+          <code>*ngIf</code>: Conditionally includes a template based on the
+          truthiness of an expression.
+        </li>
+        <li>
+          <code>*ngFor</code>: Repeats a template for each item in a collection.
+        </li>
+        <li>
+          <code>*ngSwitch</code>: Conditionally displays one of a set of
+          possible templates based on a matching expression.
+        </li>
+      </ul>
+
+      <h4>Example of Structural Directives</h4>
+      <p>
+        Here is a simple example of using <code>*ngIf</code> and
+        <code>*ngFor</code>:
+      </p>
+
+      <h5>TypeScript Component (example.component.ts)</h5>
+      <pre><code>
+import &#123; Component &#125; from '&#64;angular/core';
+
+&#64;Component(&#123;
+  selector: 'app-example',
+  templateUrl: './example.component.html',
+  styleUrls: ['./example.component.css']
+&#125;)
+export class ExampleComponent &#123;
+  showItems = true;
+  items = &#91; 'Item 1', 'Item 2', 'Item 3' &#93;;
+&#125;
+  </code></pre>
+
+      <h5>HTML Template (example.component.html)</h5>
+      <pre><code>
+&lt;div&gt;
+  &lt;button (click)="showItems = !showItems"&gt;Toggle Items&lt;/button&gt;
+
+  &lt;ul *ngIf="showItems"&gt;
+    &lt;li *ngFor="let item of items"&gt;&#123;&#123; items &#125;&#125;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+  </code></pre>
+
+      <p>
+        In this example, clicking the button toggles the visibility of the list.
+        The <code>*ngIf</code> directive conditionally displays the list based
+        on the <code>showItems</code> property, while the
+        <code>*ngFor</code> directive iterates over the <code>items</code> array
+        to generate list items.
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 class="header" (click)="toggleVisibility('faq8')" >Angular Command Tutorial</h2>
+
+    <div *ngIf="visibilityStates['faq8']" ><p> 
+        This section provides basic commands for starting a new Angular project,
+        creating components, and running the project using the Angular CLI
+        (Command Line Interface).
+      </p>
+  
+      <h3>1. Install Angular CLI</h3>
+      <p>
+        Before starting an Angular project, ensure you have the Angular CLI
+        installed. You can install it globally using npm:
+      </p>
+      <pre><code>
+    npm install -g &#64;angular/cli
+      </code></pre>
+  
+      <h3>2. Create a New Angular Project</h3>
+      <p>To create a new Angular project, use the following command:</p>
+      <pre><code>
+    ng new my-angular-project
+      </code></pre>
+      <p>
+        Replace <code>my-angular-project</code> with your desired project name.
+        You will be prompted to choose some configuration options, such as
+        including Angular routing and selecting a stylesheet format.
+      </p>
+  
+      <h3>3. Navigate to the Project Directory</h3>
+      <p>Once the project is created, navigate into the project directory:</p>
+      <pre><code>
+    cd my-angular-project
+      </code></pre>
+  
+      <h3>4. Create a New Component</h3>
+      <p>To generate a new component, use the following command:</p>
+      <pre><code>
+    ng generate component my-component
+      </code></pre>
+      <p>You can also use the shorthand command:</p>
+      <pre><code>
+    ng g c my-component
+      </code></pre>
+      <p>Replace <code>my-component</code> with the name of your component.</p>
+  
+      <h3>5. Run the Angular Project</h3>
+      <p>To start the development server and run the project, use the command:</p>
+      <pre><code>
+    ng serve
+      </code></pre>
+      <p>
+        By default, the application will be available at
+        <a href="http://localhost:4200"
+          ><code>{{ localHostUrl }}</code></a
+        >. You can open this URL in your web browser to see your application
+        running.
+      </p>
+  
+      <h3>6. Building the Project for Production</h3>
+      <p>When you're ready to build your project for production, run:</p>
+      <pre><code>
+    ng build --prod
+      </code></pre>
+      <p>
+        This will create an optimized build of your application in the
+        <code>dist/</code> folder.
+      </p></div>
+    
+  </div>
+</div>

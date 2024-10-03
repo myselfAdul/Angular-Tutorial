@@ -1,0 +1,78 @@
+.container {
+  height: auto;
+  width: auto;
+  padding: 20px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+.title {
+  width: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  color: azure !important;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.p-5 {
+  padding: 5px;
+}
+
+.f-40 {
+  font-size: 40px;
+  font-weight: 600px;
+}
+
+.card {
+  margin-top: 10px;
+  background-color: rgba(22, 21, 21, 0.871);
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: rgba(231, 167, 49, 0.685);
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black !important;
+  transition: background-color 0.5s ease;
+}
+
+.header:hover {
+  background-color: rgba(251, 1, 1, 0.421);
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  line-height: 2rem;
+}
+
+pre code {
+  text-wrap: wrap;
+  color: green;
+}
+
+code {
+  color: red;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}

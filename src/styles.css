@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    line-height: 2rem;
+    color: rgb(199, 154, 42);
+    /* font-size: 18px; */
+}
+
+/* styles.css */
+html, body {
+    height: 100%; /* Ensure html and body take full height */
+    margin: 0; /* Remove default margin */
+}
+
+body {
+    background-image: url("./assets/bg_wallpaper.jpg");
+    background-size: cover; 
+    background-position: center; /* Center the image */
+   
+    background-attachment: fixed;
+}
